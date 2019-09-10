@@ -39,9 +39,9 @@ const Team: React.FC = () => {
       <div className="container hiring">
         <h1>{t("team_hiringH1")}</h1>
         <h5>{t("team_hiringH5")}</h5>
-        <h5>
+        <h1>
           <Link to="/job/offer">Oferta de trabajo</Link>
-        </h5>
+        </h1>
         <h5>
           {t("team_hiringH52")}
           <span>{t("team_hiringH52Span")}</span>

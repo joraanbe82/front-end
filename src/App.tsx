@@ -33,13 +33,12 @@ const App: React.FC<IPropsGlobal> = () => {
       <LayoutPage />
       {!isCookiesAccepted && (
         <div className="container-fluid cookies">
-          <p>
+          <p className="cookieTxt">
             {t("cookies_P1")}
-            <button className="btn btn-dark btnCookie" onClick={acceptCookies}>
-              OK
-            </button>
+           
             <br />
             {t("cookies_P2")}
+           
 
             {i18n.language === "es" && (
               <a href="/PrivacyPolicyES.pdf" download>
@@ -57,7 +56,11 @@ const App: React.FC<IPropsGlobal> = () => {
               <a href="/PrivacyPolicyGE.pdf" download>
                 {t("cookies_link")}
               </a>
+              
             )}
+             <button className="btn btn-dark btnCookie" onClick={acceptCookies}>
+              OK
+            </button>
           </p>
         </div>
       )}

@@ -8,7 +8,6 @@ const MyVideoPlayer: React.FC = () => {
   return (
     <div className="container video">
       <Video
-        loop
         controls={[
           "PlayPause",
           "Seek",
@@ -22,7 +21,7 @@ const MyVideoPlayer: React.FC = () => {
           // Do stuff
         }}
       >
-        <source src="./img/video/DarkFate.mp4" type="video/mp4" />
+        <source src="./img/video/levelUP-Video.mp4" type="video/mp4" />
         <track
           label="Spanish"
           kind="subtitles"
@@ -37,7 +36,13 @@ const MyVideoPlayer: React.FC = () => {
           src="/img/video/videoSubtitles_en.vtt"
           default
         />
-        <track label="German" kind="subtitles" srcLang="ge" src="" default />
+        <track
+          label="German"
+          kind="subtitles"
+          srcLang="ge"
+          src="/img/video/videoSubtitles_ge.vtt"
+          default
+        />
       </Video>
     </div>
   );

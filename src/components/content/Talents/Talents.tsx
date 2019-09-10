@@ -73,13 +73,12 @@ const Talents: React.FC<IPropsGlobal & RouteComponentProps> = props => {
   );
   const validatePassword = validPasswordRegex.test(passValue);
 
- 
-  const validateName = 
-  /^([a-zA-ZÀ-ÿ' ]+)$/.test( //eslint-disable-line
+  const validateName = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(
+    //eslint-disable-line
     first_nameValue
   );
-  const valdiateSurname = 
-  /^([a-zA-ZÀ-ÿ' ]+)$/.test(  //eslint-disable-line
+  const valdiateSurname = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(
+    //eslint-disable-line
     last_nameValue
   );
 

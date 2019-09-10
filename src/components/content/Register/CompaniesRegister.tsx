@@ -55,28 +55,28 @@ const CompaniesRegister: React.FC<
   };
 
   const validEmailRegex = RegExp(
-    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i  //eslint-disable-line
+    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i //eslint-disable-line
   );
 
   const finalValidateEmail = validEmailRegex.test(emailValue); //check if mail is valid
 
   const mediumRegex = new RegExp(
     "^(((?=.*[a-z])(?=.*[A-Z]))((?=.*[a-z])(?=.*[0-9]))((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})" //eslint-disable-line
-  ); 
+  );
   const validatePassword = mediumRegex.test(passValue);
 
- 
-  const validateName = 
-    /^([a-zA-Z' ]+)$/.test( //eslint-disable-line
+  const validateName = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(
+    //eslint-disable-line
     first_nameValue
   );
-  const valdiateSurname = 
-  /^([a-zA-Z' ]+)$/.test(  //eslint-disable-line
+  const valdiateSurname = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(
+    //eslint-disable-line
     last_nameValue
   );
-  const validateCompanyName = /^([a-zA-Z' ]+)$/.test( //eslint-disable-line
+  const validateCompanyName = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(
+    //eslint-disable-line
     first_CompanynameValue
-  ); 
+  );
   const newCompany = () => {
     if (
       first_CompanynameValue !== "" &&
@@ -135,7 +135,7 @@ const CompaniesRegister: React.FC<
           setErrorSurname("invalid surname");
         }
         if (!validateCompanyName) {
-          setErrorSurname("invalid company name");
+          setErrorCompanyName("invalid company name");
         }
       }
     } else {
