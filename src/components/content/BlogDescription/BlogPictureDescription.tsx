@@ -16,7 +16,7 @@ const BlogPictureDescription: React.FC<
 > = props => {
   useEffect(() => {
     //con esto pinto los blogs de redux
-    fetch("http://localhost:8080/apiBlogPicture/", {
+    fetch("https://backendlevelup.herokuapp.com/apiBlogPicture/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -30,7 +30,7 @@ const BlogPictureDescription: React.FC<
     }); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const path = "http://localhost:8080/uploads/";
+  const path = "https://backendlevelup.herokuapp.com/uploads/";
 
   return (
     <div>

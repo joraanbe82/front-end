@@ -16,10 +16,17 @@ const App: React.FC<IPropsGlobal> = () => {
   const { t, i18n } = useTranslation();
   const [isCookiesAccepted, setIsCookiesAccepted] = React.useState(false);
 
+  useEffect(()=> {
+    i18n.changeLanguage(lng)  
+  },[]);  
+  let language = i18n.language;
+  let lng = language.substr(0,2);
+  
+
   const acceptCookies = () => {
     localStorage.setItem("cookies", "accepted");
     setIsCookiesAccepted(true);
-  };
+  }; 
 
   useEffect(() => {
     const accepted = localStorage.getItem("cookies");
@@ -52,7 +59,7 @@ const App: React.FC<IPropsGlobal> = () => {
               </a>
             )}
 
-            {i18n.language === "ge" && (
+            {i18n.language === "de" && (
               <a href="/PrivacyPolicyGE.pdf" download>
                 {t("cookies_link")}
               </a>

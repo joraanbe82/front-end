@@ -47,3 +47,16 @@ export interface ICompany {
 export interface IState {
   booleanState: boolean;
 }
+
+export interface ISkills {
+  talentId: string,
+    worksAreas: Array<Text>,
+    levelExperience: string,
+    locations: string,
+    spanishSkills: string,
+    englishSkills: string,
+    germanSkills: string,
+    futherLanguageSkills: string,
+    furtherLanguage: string
+}
+

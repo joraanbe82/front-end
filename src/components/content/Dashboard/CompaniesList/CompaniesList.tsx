@@ -21,7 +21,7 @@ const CompaniesList: React.FC<IPropsGlobal & RouteComponentProps> = props => {
 
       if (decode !== null && typeof decode !== "string" && decode.isAdmin) {
         //Typescript description necesary to verify token
-        fetch("http://localhost:8080/apiCompanies/companies/", {
+        fetch("https://backendlevelup.herokuapp.com/apiCompanies/companies/", {
           headers: {
             "Content-type": "application/json",
             Accept: "application/json",

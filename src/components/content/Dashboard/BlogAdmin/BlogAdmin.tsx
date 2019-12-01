@@ -23,7 +23,7 @@ const Blog: React.FC<
 > = props => {
   useEffect(() => {
     //con esto pinto los blogs de redux
-    fetch("http://localhost:8080/apiBlog", {
+    fetch("https://backendlevelup.herokuapp.com/apiBlog", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -64,7 +64,7 @@ const Blog: React.FC<
     data.append("secondSubtitle", secondSubtitleValue);
     data.append("description", descriptionValue);
 
-    fetch("http://localhost:8080/apiBlog/", {
+    fetch("https://backendlevelup.herokuapp.com/apiBlog/", {
       method: "POST",
       body: data
     }).then(response => {

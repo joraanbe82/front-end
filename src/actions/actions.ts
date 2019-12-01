@@ -5,7 +5,8 @@ import {
   IBlog,
   IInsta,
   IBlogPicture,
-  ICompany
+  ICompany,
+  ISkills
 } from "../interfaces/interfaces";
 
 export const getToken: ActionCreator<TAction> = (token: string) => ({
@@ -137,4 +138,11 @@ export const changingState: ActionCreator<TAction> = (
 ) => ({
   type: "CHANGE_STATE",
   booleanState
+});
+
+export const setSkills : ActionCreator<TAction> =(
+  skills: ISkills[]
+) => ({
+  type: "SET_SKILLS",
+  skills
 });

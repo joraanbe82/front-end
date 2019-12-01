@@ -22,7 +22,7 @@ const UsersList: React.FC<IPropsGlobal & RouteComponentProps> = props => {
       if (decode !== null && typeof decode !== "string") {
         //Typescript description necesary
         if (decode.isAdmin) {
-          fetch("http://localhost:8080/api/users", {
+          fetch("https://backendlevelup.herokuapp.com/api/users", {
             headers: {
               "Content-type": "application/json",
               Accept: "application/json",

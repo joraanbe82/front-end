@@ -25,7 +25,7 @@ const BlogDescription: React.FC<
     /*Needed this fetch again for when refreshing the browser */
     if (props.blogs.length === 0) {
       //calling redux to print blogs
-      fetch("http://localhost:8080/apiBlog", {
+      fetch("https://backendlevelup.herokuapp.com/apiBlog", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +59,7 @@ const BlogDescription: React.FC<
     } // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blog]);
 
-  const path = "http://localhost:8080/uploads/";
+  const path = "https://backendlevelup.herokuapp.com/uploads/";
 
   return (
     <div className="container bodyBlog">
@@ -70,8 +70,8 @@ const BlogDescription: React.FC<
           <li>HR Tips</li>
         </ul>
       </div>
-      <div className="row">
-        <div className="col-9">
+      <div className="row descriptionBlog">
+        <div className="col-9 firstBlog">
           <h1 className="blogTitle">{titleValue}</h1>
           <h5 className="blogSubtitle">{subtitleValue}</h5>
 
@@ -80,7 +80,7 @@ const BlogDescription: React.FC<
           </div>
           <h6 className="secondSubtitle">{secondSubtitleValue}</h6>
           <div className="blogDescription">
-            <h4>{descriptionValue}</h4>
+            <p>{descriptionValue}</p>
           </div>
         </div>
         <div className="col-3 bordering">

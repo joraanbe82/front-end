@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className="container contact">
-      <div className="container row">
+      <div className="row contactGroup">
         <div className="col-6 data">
           <h1>{t("contact_dataH1")}</h1>
           <div className="first">
@@ -25,7 +25,8 @@ const Contact: React.FC = () => {
           </div>
           <div className="second">
             <h5>{t("contact_secondH5")}</h5>
-            <h5 className="grey">Graf-Zeppelin-Straße 32 31157 Sarstedt</h5>
+            <h5 className="grey">Apenrader Straße 37</h5>
+            <h5 className="grey">30165 Hannover</h5>
           </div>
           <div className="third">
             <h5>{t("contact_thirdH5")}</h5>
@@ -65,7 +66,7 @@ const Contact: React.FC = () => {
               <a
                 className="XG"
                 target="_blank"
-                href="https://www.xing.com/profile/Sandra_Thomas32"
+                href="https://www.xing.com/companies/network-levelup"
                 rel="noopener noreferrer"
               >
                 <li className="SocialList">
@@ -75,7 +76,7 @@ const Contact: React.FC = () => {
               <a
                 className="YT"
                 target="_blank"
-                href="https://www.youtube.com/channel/UCdz_BfUo5LlKvh13s0wenhg"
+                href="https://www.youtube.com/channel/UC02i1gSEb4gAyBQ-ki6GcHQ/featured"
                 rel="noopener noreferrer"
               >
                 <li className="SocialList">
@@ -86,7 +87,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div className="col-6 contactPicture">
-          <img className="picture" alt="" src={contactPicture} />
+          <img className="pictureContact" alt="" src={contactPicture} />
         </div>
       </div>
     </div>

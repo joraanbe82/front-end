@@ -62,7 +62,7 @@ const BlogDetails: React.FC<
     data.append("secondSubtitle", secondSubtitleValue);
     data.append("description", descriptionValue);
 
-    fetch("http://localhost:8080/apiBlog/" + blog._id, {
+    fetch("https://backendlevelup.herokuapp.com/apiBlog/" + blog._id, {
       method: "PUT",
       body: data
     }).then(response => {
@@ -76,7 +76,7 @@ const BlogDetails: React.FC<
   };
 
   const deleteBlog = () => {
-    fetch("http://localhost:8080/apiBlog/" + blog._id, {
+    fetch("https://backendlevelup.herokuapp.com/apiBlog/" + blog._id, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json"

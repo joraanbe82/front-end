@@ -20,7 +20,7 @@ const BlogList: React.FC<IPropsGlobal & RouteComponentProps> = props => {
 
   useEffect(() => {
     //calling redux to print blogs
-    fetch("http://localhost:8080/apiBlog", {
+    fetch("https://backendlevelup.herokuapp.com/apiBlog", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -35,19 +35,19 @@ const BlogList: React.FC<IPropsGlobal & RouteComponentProps> = props => {
     }); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const path = "http://localhost:8080/uploads/";
+  const path = "https://backendlevelup.herokuapp.com/public/uploads/";
   return (
     <div className="container allBlog">      
-      <div className="menuTop">
+      {/* <div className="menuTop">
         <ul className="listTop">
           <li>All Posts</li>
           <li>Career Tips</li>
           <li>HR Tips</li>
         </ul>
-      </div>
+      </div> */}
       <div className="container blog1">
-        <div className="row">
-          <div className="col-5 update">
+        <div className="row blogTop">
+          <div className="col-6 update">
             <h1>{t("blog_allBlogH1")}</h1>
             <h5>{t("blog_allBlogH5")}</h5>
             <h5>{t("blog_allBlogH52")}</h5>
@@ -58,14 +58,14 @@ const BlogList: React.FC<IPropsGlobal & RouteComponentProps> = props => {
             </Link>
           </div>
 
-          <div className="col-7 blog2">
+          <div className="col-5 blog2">
             <img className="mountain" alt="" src={mountain} />
           </div>
         </div>
       </div>
       <h1 className="latestBlog">{t("blog_latestBlogH1")}</h1>
 
-      <div className="container">
+      <div className="container bodyCardsBlog">
         <div className="row">
           {props.blogs.map(blog => (
             <div key={blog._id} className="container col-6 cards">
@@ -74,9 +74,9 @@ const BlogList: React.FC<IPropsGlobal & RouteComponentProps> = props => {
               </div>
 
               <div className="cardBody">
-                <h4 className="title">{blog.title}</h4>
+                <h5 className="title">{blog.title}</h5>
                 <p className={styles.subtitle}>{blog.subtitle}</p>
-                <p className="description">{blog.description}</p>
+                <p className="description">{blog.secondSubtitle}</p>
                 <Link to={"/blog/description/" + blog._id}>
                   <button className="btn btn-outline-success readMore">
                     {t("blog_btn")}

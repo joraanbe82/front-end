@@ -5,8 +5,6 @@ import { connect } from "react-redux";
 import { RouteComponentProps, Redirect } from "react-router";
 import { IGlobalState } from "../../../../reducers/reducers";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import task from "../../../../img/BlogPicture/task.png";
 import "./BlogPicture.css";
 
@@ -21,7 +19,7 @@ const BlogPicture: React.FC<
 > = props => {
   useEffect(() => {
     //con esto pinto los blogs de redux
-    fetch("http://localhost:8080/apiBlogPicture/", {
+    fetch("https://backendlevelup.herokuapp.com/apiBlogPicture/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -53,7 +51,7 @@ const BlogPicture: React.FC<
     data.append("description", descriptionValue);
     data.append("link", linkValue);
 
-    fetch("http://localhost:8080/apiBlogPicture/", {
+    fetch("https://backendlevelup.herokuapp.com/apiBlogPicture/", {
       method: "POST",
       body: data
     }).then(response => {
@@ -76,11 +74,6 @@ const BlogPicture: React.FC<
           <div className="blogPicture">
             <div className="title">
               <h2>Description</h2>
-              <FontAwesomeIcon
-                className="iconPicture"
-                icon={faEdit}
-                size="6x"
-              />
             </div>
 
             <textarea

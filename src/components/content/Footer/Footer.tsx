@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
         <a
           className="XG"
           target="_blank"
-          href="https://www.xing.com/profile/Sandra_Thomas32"
+          href="https://www.xing.com/companies/network-levelup"
           rel="noopener noreferrer"
         >
           <li className="footList">
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
         <a
           className="YT"
           target="_blank"
-          href="https://www.youtube.com/channel/UCdz_BfUo5LlKvh13s0wenhg"
+          href="https://www.youtube.com/channel/UC02i1gSEb4gAyBQ-ki6GcHQ/featured"
           rel="noopener noreferrer"
         >
           <li className="footList">
@@ -85,8 +85,8 @@ const Footer: React.FC = () => {
           </a>
         )}
 
-        {i18n.language === "ge" && (
-          <a href="/PrivacyPolicyGE.pdf" download>
+        {i18n.language === "de" && (
+          <a href="/PrivacyPolicyDE.pdf" download>
             <li className="footList">{t("footer_Privacy")}</li>
           </a>
         )}

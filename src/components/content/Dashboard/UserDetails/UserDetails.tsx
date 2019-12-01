@@ -39,7 +39,7 @@ const UserDetails: React.FC<
   }
 
   const deleteUser = () => {
-    fetch("http://localhost:8080/api/users/" + user._id, {
+    fetch("https://backendlevelup.herokuapp.com/api/users/" + user._id, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json"

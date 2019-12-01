@@ -92,7 +92,7 @@ const CompaniesRegister: React.FC<
         valdiateSurname &&
         validateCompanyName
       ) {
-        fetch("http://localhost:8080/apiCompanies/", {
+        fetch("https://backendlevelup.herokuapp.com/apiCompanies/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -144,7 +144,7 @@ const CompaniesRegister: React.FC<
   };
 
   return (
-    <div className="container formulary">
+    <div className="container formulary company">
       <input
         type="text"
         className="companyReg"

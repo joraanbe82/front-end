@@ -20,19 +20,21 @@ import Privacy from "./Privacy Terms/Privacy";
 import RegisterUserVerification from "./Verification/RegisterUserVerification";
 import RegisterCompanyVerification from "./Verification/RegisterCompanyVerification";
 import NoFound from "./NoFound/NoFound";
-import Video from "./Home/Video";
 import SiteNotice from "./SiteNotice/SiteNotice";
 import Team from "./Team/Team";
 import JobOffer from "./Team/JobOffer";
 import Companies from "./Companies/Companies";
 import TermsConditions from "./Terms of Conditions/TermsConditions";
 import Login from "./Login/Login";
+import TalentProfile from './Talent Profile/TalentProfile';
+import Unsubscribe from './Unsubscribe/Unsubscribe';
 
 const Content: React.FC = () => {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/talents" exact component={Talents} />
+      <Route path="/talents/profile/:userId?" exact component={TalentProfile}/>
       <Route path="/companies" exact component={Companies} />
       <Route path="/login" exact component={Login} />
       <Route path="/register" exact component={Register} />
@@ -55,13 +57,14 @@ const Content: React.FC = () => {
         component={BlogDescription}
       />
       <Route path="/contact" exact component={Contact} />
-      <Route path="/verify/:userId?" exact component={Verification} />{" "}
+      <Route path="/verify/:userId?" exact component={Verification} />
       {/* Verification emails */}
       <Route
         path="/verify/companies/:companyId?"
         exact
         component={VerificationCompanies}
       />
+      <Route path="/unsubscribe/:userId?" exact component={Unsubscribe}/>
       <Route
         path="/register/user/verification"
         exact
@@ -77,7 +80,6 @@ const Content: React.FC = () => {
       <Route path="/site/notice" exact component={SiteNotice} />
       <Route path="/team" exact component={Team} />
       <Route path="/job/offer" exact component={JobOffer} />
-      <Route path="/video" exact component={Video} />
       <Route path="*" component={NoFound} /> {/*Component 404*/}
     </Switch>
   );

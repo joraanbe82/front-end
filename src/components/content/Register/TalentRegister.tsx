@@ -78,10 +78,11 @@ const TalentRegister: React.FC<IPropsGlobal & RouteComponentProps> = props => {
         validateName &&
         valdiateSurname
       ) {
-        fetch("http://localhost:8080/api/users/", {
+        fetch("https://backendlevelup.herokuapp.com/api/users/", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            mode: "cors"
           },
           body: JSON.stringify({
             first_name: first_nameValue,
@@ -127,6 +128,7 @@ const TalentRegister: React.FC<IPropsGlobal & RouteComponentProps> = props => {
 
   return (
     <div className="container formulary talent">
+            
       <input
         type="text"
         className="talentReg"
@@ -178,6 +180,7 @@ const TalentRegister: React.FC<IPropsGlobal & RouteComponentProps> = props => {
           {t("talentRegister_btn")}
         </button>
       </span>
+      
     </div>
   );
 };

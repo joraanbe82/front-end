@@ -23,7 +23,7 @@ const LayoutPage: React.FC<IPropsGlobal> = props => {
       let decode = jwt.decode(props.token);
       if (decode !== null && typeof decode !== "string") {       
         if (decode.isAdmin) {
-          fetch("http://localhost:8080/api/users", {
+          fetch("https://backendlevelup.herokuapp.com/api/users", {
             headers: {
               "Content-type": "application/json",
               Accept: "application/json",

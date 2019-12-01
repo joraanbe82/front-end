@@ -54,7 +54,7 @@ const BlogPictureDetails: React.FC<
     data.append("description", descriptionValue);
     data.append("link", linkValue);
 
-    fetch("http://localhost:8080/apiBlogPicture/" + blogPicture._id, {
+    fetch("https://backendlevelup.herokuapp.com/apiBlogPicture/" + blogPicture._id, {
       method: "PUT",
       body: data
     }).then(response => {
@@ -68,7 +68,7 @@ const BlogPictureDetails: React.FC<
   };
 
   const deleteBlog = () => {
-    fetch("http://localhost:8080/apiBlogPicture/" + blogPicture._id, {
+    fetch("https://backendlevelup.herokuapp.com/apiBlogPicture/" + blogPicture._id, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json"

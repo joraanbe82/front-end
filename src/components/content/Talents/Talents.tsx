@@ -13,7 +13,6 @@ import No4 from "../../../img/TalentsPage/No4.png";
 import No3 from "../../../img/TalentsPage/No3.png";
 import No2 from "../../../img/TalentsPage/No2.png";
 import No1 from "../../../img/TalentsPage/No1.png";
-import contract from "../../../img/TalentsPage/Graphic1.png";
 import graph1 from "../../../img/TalentsPage/Graphic4.png";
 import graph2 from "../../../img/TalentsPage/Graphic3.png";
 import graph3 from "../../../img/TalentsPage/Graphic5.png";
@@ -95,7 +94,7 @@ const Talents: React.FC<IPropsGlobal & RouteComponentProps> = props => {
         validateName &&
         valdiateSurname
       ) {
-        fetch("http://localhost:8080/api/users/", {
+        fetch("https://backendlevelup.herokuapp.com/api/users/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -146,7 +145,7 @@ const Talents: React.FC<IPropsGlobal & RouteComponentProps> = props => {
       <div className="row  talents1">
         <div className="col-6 talentText">
           <h1>{t("talents_talents1H1")}</h1>
-          <h5>{t("talents_talents1H5")}</h5>
+          <h6>{t("talents_talents1H5")}</h6>
           <Link to="/register">
             <button onClick={change} className="btnPink">
               {t("talents_btnReserve")}
@@ -161,60 +160,64 @@ const Talents: React.FC<IPropsGlobal & RouteComponentProps> = props => {
 
       <div className="container talents2">
         <div className="work">
-          <h1>{t("talents_talents2H1")}</h1>
+          <h3>{t("talents_talents2H1")}</h3>
           <h5>{t("talents_talents2H5")}</h5>
         </div>
         <div className="steps">
-          <div className="row five">
-            <img className="contract" alt="" src={contract} />
-
+        <div className="row one">
             <div className="div">
-              <img className="NoImg" alt="" src={No5} />
+              <img className="NoImg" alt="" src={No1} />
             </div>
-            <div className="col-4 hired">
-              <h1>{t("talents_talents2H12")}</h1>
-              <h5>{t("talents_talents2H52")}</h5>
+            <div className="col-6 hired">
+              <h3 className="adjustM">{t("talents_talents2H36")}</h3>
+              <h5>{t("talents_talents2H66")}</h5>
+            </div>
+          </div>
+          <div className="row moved">
+            <div className="div">
+              <img className="NoImg" alt="" src={No2} />
+            </div>
+            <div className="col-6 hired">
+              <h3 className="adjustM">{t("talents_talents2H35")}</h3>
+              <h5>{t("talents_talenst2H65")}</h5>
+            </div>
+          </div>
+          <div className="row three">
+            <div className="div">
+              <img className="NoImg" alt="" src={No3} />
+            </div>
+            <div className="col-6 hired">
+              <h3 className="adjustM">{t("talents_talents2H34")}</h3>
+              <h5>{t("talents_talenst2H64")}</h5>
             </div>
           </div>
           <div className="row moved">
             <div className="div">
               <img className="NoImg" alt="" src={No4} />
             </div>
-            <div className="col-6">
-              <h1>{t("talents_talents2H13")}</h1>
-              <h5>{t("talents_talents2H53")}</h5>
+            <div className="col-6 hired">
+              <h3 className="adjustM">{t("talents_talents2H33")}</h3>
+              <h5>{t("talents_talents2H63")}</h5>
             </div>
           </div>
+          <div className="row five">
+            {/* <img className="contract" alt="" src={contract} /> */}
 
-          <div className="row three">
             <div className="div">
-              <img className="NoImg" alt="" src={No3} />
+              <img className="NoImg" alt="" src={No5} />
             </div>
-            <div className="col-6">
-              <h1>{t("talents_talents2H14")}</h1>
-              <h5>{t("talents_talenst2H54")}</h5>
+            <div className="col-6 hired"> 
+              <h3 className="adjustM">{t("talents_talents2H32")}</h3>
+              <h5>{t("talents_talents2H62")}</h5>
             </div>
           </div>
+          
 
-          <div className="row moved">
-            <div className="div">
-              <img className="NoImg" alt="" src={No2} />
-            </div>
-            <div className="col-6">
-              <h1>{t("talents_talents2H15")}</h1>
-              <h5>{t("talents_talenst2H55")}</h5>
-            </div>
-          </div>
+          
 
-          <div className="row one">
-            <div className="div">
-              <img className="NoImg" alt="" src={No1} />
-            </div>
-            <div className="col-6">
-              <h1>{t("talents_talents2H16")}</h1>
-              <h5>{t("talents_talents2H56")}</h5>
-            </div>
-          </div>
+          
+
+          
         </div>
       </div>
 
@@ -224,20 +227,20 @@ const Talents: React.FC<IPropsGlobal & RouteComponentProps> = props => {
       </div>
 
       <div className="talents4">
-        <div>
+        <div className="divMarginLeft">
           <img className="down1" alt="" src={graph1} />
-          <h1>{t("talenst_talents4H1")}</h1>
-          <h5>{t("talents_talents4H5")}</h5>
-        </div>
-        <div>
+          <h3>{t("talenst_talents4H1")}</h3>
+          <h6>{t("talents_talents4H5")}</h6>
+        </div> 
+        <div className="divImgUp">
           <img className="GraphImg up" alt="" src={graph2} />
-          <h1>{t("talenst_talents4H12")}</h1>
-          <h5>{t("talents_talents4H52")}</h5>
+          <h3>{t("talenst_talents4H12")}</h3>
+          <h6>{t("talents_talents4H52")}</h6>
         </div>
         <div className="marginRight">
           <img className="GraphImg down2" alt="" src={graph3} />
-          <h1>{t("talenst_talents4H13")}</h1>
-          <h5>{t("talents_talents4H53")}</h5>
+          <h3>{t("talenst_talents4H13")}</h3>
+          <h6>{t("talents_talents4H53")}</h6>
         </div>
       </div>
 
@@ -294,7 +297,7 @@ const Talents: React.FC<IPropsGlobal & RouteComponentProps> = props => {
         <button className="btnDoIt" onClick={newUser}>
           {t("talents_btnDoIt")}
         </button>
-        <p>{t("talents_talents6P")}</p>
+        <p  className="agree">{t("talents_talents6P")}</p>
       </div>
       <div>
         <ScrollUpButton

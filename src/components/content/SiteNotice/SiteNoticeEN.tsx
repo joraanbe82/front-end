@@ -5,11 +5,11 @@ const SiteNoticeEN: React.FC = () => {
     <div className="container">
       <p>Sandra Thomas & Marcel Rödiger GbR</p>
       <p>
-        Accionistas autorizados para representar a la empresa: Sandra Thomas and
+      Shareholders authorized to represent the company: Sandra Thomas and
         Marcel Rödiger
       </p>
-      <p>Graf-Zeppelin-Str. 32</p>
-      <p>31157 Sarstedt</p>
+      <p>Apenrader Straße 37</p>
+      <p>30165 Hannover</p>
       <p>Germany</p>
       <br />
       <p>Telephone: +49 (0)151 / 2230 1610</p>
@@ -20,7 +20,7 @@ const SiteNoticeEN: React.FC = () => {
       </p>
       <p>
         Responsible for all content (required by law § 55 RStV): Sandra Thomas
-        and Marcel Rödiger
+        and Marcel Rödiger, Apenrader Straße 37, 30165 Hannover.
       </p>
       <p>District Court Hannover</p>
       <br />
