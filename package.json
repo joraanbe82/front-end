@@ -31,7 +31,7 @@
     "react-material-design": "^0.4.3",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-scroll-up-button": "^1.6.4",
     "redux": "^4.0.4",
     "typescript": "3.5.3"
